@@ -4,6 +4,11 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+    getters and setters must match property name in order to be serialized and
+    deserialized to json
+ */
+
 @Entity
 @Table
 public class Cemetery {
@@ -26,8 +31,6 @@ public class Cemetery {
 
     @OneToMany(mappedBy = "cemetery", cascade = CascadeType.ALL)
     private Set<Grave> graves = new HashSet<>();
-
-
 
     public Integer getGraveCount() {
         return graveCount;
@@ -78,11 +81,11 @@ public class Cemetery {
         this.townShip = townShip;
     }
 
-    public String getRange() {
+    public String getCemRange() {
         return cemRange;
     }
-    public void setRange(String range) {
-        this.cemRange = range;
+    public void setRange(String cemRange) {
+        this.cemRange = cemRange;
     }
 
     public String getSpot() {
@@ -99,11 +102,11 @@ public class Cemetery {
         this.firstYear = firstYear;
     }
 
-    public String getSection() {
+    public String getCemSection() {
         return cemSection;
     }
-    public void setSection(String section) {
-        this.cemSection = section;
+    public void setSection(String cemSection) {
+        this.cemSection = cemSection;
     }
 
     public Long getEpochTimeAdded() {
