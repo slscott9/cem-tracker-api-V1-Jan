@@ -25,8 +25,6 @@ public class GraveDto {
     private Long epochTimeAdded;
     @Nullable
     private String addedBy;
-
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Nullable
     private Long cemetery;
 
