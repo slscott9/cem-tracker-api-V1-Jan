@@ -12,7 +12,7 @@ import java.util.Set;
 public class CemeteryDto {
 
     @Nullable
-    private Long cemeteryId;
+    private Long id;
     @Nullable
     private String name;
     @Nullable
@@ -55,12 +55,12 @@ public class CemeteryDto {
     }
 
 
-    public Long getCemeteryId() {
-        return cemeteryId;
+    public Long getId() {
+        return id;
     }
 
-    public void setCemeteryId(Long cemeteryId) {
-        this.cemeteryId = cemeteryId;
+    public void setId(Long cemeteryId) {
+        this.id = cemeteryId;
     }
 
     public String getName() {

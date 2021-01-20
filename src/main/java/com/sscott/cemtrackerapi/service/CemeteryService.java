@@ -30,4 +30,15 @@ public class CemeteryService {
         return cemeteryRepository.save(cemetery);
     }
 
+    public Long getMostRecentTimeAdded() {return cemeteryRepository.getMostRecentTime();}
+
+    public List<Cemetery> saveCemeteries(List<Cemetery> cemeteryList) {
+        return cemeteryRepository.saveAll(cemeteryList);
+
+    }
+
+    public List<Cemetery> userCemeteries(String userName) {
+        return cemeteryRepository.getUserCemeteries(userName);
+    }
+
 }

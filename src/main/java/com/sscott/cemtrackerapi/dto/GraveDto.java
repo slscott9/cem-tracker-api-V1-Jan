@@ -1,17 +1,33 @@
 package com.sscott.cemtrackerapi.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.lang.Nullable;
+
 public class GraveDto {
 
+    @Nullable
     private Long graveId;
+    @Nullable
     private String firstName;
+    @Nullable
     private String lastName;
+    @Nullable
     private String birthDate;
+    @Nullable
     private String deathDate;
+    @Nullable
     private String marriageYear;
+    @Nullable
     private String comment;
+    @Nullable
     private String graveNumber;
+    @Nullable
     private Long epochTimeAdded;
+    @Nullable
     private String addedBy;
+
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @Nullable
     private Long cemetery;
 
 

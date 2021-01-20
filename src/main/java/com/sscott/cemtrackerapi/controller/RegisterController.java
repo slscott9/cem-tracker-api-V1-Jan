@@ -28,7 +28,7 @@ public class RegisterController {
 
     //ResponseEntity represents the whole Http response, status code, headers , body
 
-    @PostMapping("/v1/register")
+    @PostMapping("v1/register")
     public ResponseEntity<UserDto> register(@RequestBody UserDto userDto){
         User user = new User(
                 userDto.getEmail(),

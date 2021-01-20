@@ -23,7 +23,6 @@ public class Grave {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "cemeteryId")
-    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
     private Cemetery cemetery;
 
 
