@@ -43,7 +43,13 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .httpBasic();
+
+        http.requiresChannel()
+                .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+                .requiresSecure();
     }
+
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
