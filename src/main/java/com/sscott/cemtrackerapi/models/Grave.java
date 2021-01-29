@@ -9,7 +9,6 @@ import javax.persistence.*;
 public class Grave {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long graveId;
     private String firstName;
     private String lastName;
@@ -19,10 +18,11 @@ public class Grave {
     private String comment;
     private String graveNumber;
     private Long epochTimeAdded;
+    private Long cemId;
     private String addedBy;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "cemeteryId")
+    @JoinColumn(name = "id")
     private Cemetery cemetery;
 
 
@@ -101,12 +101,20 @@ public class Grave {
         Make getter return cemetery.id in order to get json to send the cemetery id instead of whole cemetery object to client
      */
 
-    public Long getCemetery() {
-        return cemetery.getId();
+    public Cemetery getCemetery() {
+        return cemetery;
     }
 
     public void setCemetery(Cemetery cemetery) {
         this.cemetery = cemetery;
+    }
+
+    public Long getCemId() {
+        return cemId;
+    }
+
+    public void setCemId(Long cemeteryId) {
+        this.cemId = cemeteryId;
     }
 }
 

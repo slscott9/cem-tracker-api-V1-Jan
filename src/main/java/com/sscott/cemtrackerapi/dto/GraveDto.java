@@ -26,95 +26,105 @@ public class GraveDto {
     @Nullable
     private String addedBy;
     @Nullable
-    private Long cemetery;
+    private Long cemId;
 
 
-    public Long getCemetery() {
-        return cemetery;
-    }
-
-    public void setCemetery(Long cemetery) {
-        this.cemetery = cemetery;
-    }
-
-
+    @Nullable
     public Long getGraveId() {
         return graveId;
     }
 
-    public void setGraveId(Long graveId) {
+    public void setGraveId(@Nullable Long graveId) {
         this.graveId = graveId;
     }
 
+    @Nullable
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(@Nullable String firstName) {
         this.firstName = firstName;
     }
 
+    @Nullable
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(@Nullable String lastName) {
         this.lastName = lastName;
     }
 
+    @Nullable
     public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(@Nullable String birthDate) {
         this.birthDate = birthDate;
     }
 
+    @Nullable
     public String getDeathDate() {
         return deathDate;
     }
 
-    public void setDeathDate(String deathDate) {
+    public void setDeathDate(@Nullable String deathDate) {
         this.deathDate = deathDate;
     }
 
+    @Nullable
     public String getMarriageYear() {
         return marriageYear;
     }
 
-    public void setMarriageYear(String marriageYear) {
+    public void setMarriageYear(@Nullable String marriageYear) {
         this.marriageYear = marriageYear;
     }
 
+    @Nullable
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public void setComment(@Nullable String comment) {
         this.comment = comment;
     }
 
+    @Nullable
     public String getGraveNumber() {
         return graveNumber;
     }
 
-    public void setGraveNumber(String graveNumber) {
+    public void setGraveNumber(@Nullable String graveNumber) {
         this.graveNumber = graveNumber;
     }
 
+    @Nullable
     public Long getEpochTimeAdded() {
         return epochTimeAdded;
     }
 
-    public void setEpochTimeAdded(Long epochTimeAdded) {
+    public void setEpochTimeAdded(@Nullable Long epochTimeAdded) {
         this.epochTimeAdded = epochTimeAdded;
     }
 
+    @Nullable
     public String getAddedBy() {
         return addedBy;
     }
 
-    public void setAddedBy(String addedBy) {
+    public void setAddedBy(@Nullable String addedBy) {
         this.addedBy = addedBy;
+    }
+
+    @Nullable
+    public Long getCemId() {
+        return cemId;
+    }
+
+    public void setCemId(@Nullable Long cemetery) {
+        this.cemId = cemetery;
     }
 }

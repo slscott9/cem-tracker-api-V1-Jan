@@ -1,5 +1,7 @@
 package com.sscott.cemtrackerapi.models;
 
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,8 +16,7 @@ import java.util.Set;
 public class Cemetery {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cemeteryId;
+    private Long id;
     private String name;
     private String location;
     private String state;
@@ -29,6 +30,7 @@ public class Cemetery {
     private String addedBy;
     private Integer graveCount;
 
+    @Nullable
     @OneToMany(mappedBy = "cemetery", cascade = CascadeType.ALL)
     private Set<Grave> graves = new HashSet<>();
 
@@ -47,10 +49,10 @@ public class Cemetery {
     }
 
     public Long getId() {
-        return cemeteryId;
+        return id;
     }
     public void setId(Long id) {
-        this.cemeteryId = id;
+        this.id = id;
     }
 
     public String getName() {

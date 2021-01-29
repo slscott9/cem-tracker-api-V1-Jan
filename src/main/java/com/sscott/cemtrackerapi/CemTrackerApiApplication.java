@@ -1,6 +1,7 @@
 package com.sscott.cemtrackerapi;
 
 import com.sscott.cemtrackerapi.dao.CemeteryRepository;
+import com.sscott.cemtrackerapi.dao.GraveRepository;
 import com.sscott.cemtrackerapi.dao.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackageClasses = {UserRepository.class, CemeteryRepository.class})
+@EnableJpaRepositories(basePackageClasses = {UserRepository.class, CemeteryRepository.class, GraveRepository.class})
 public class CemTrackerApiApplication {
 
 	@Bean
